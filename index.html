@@ -10,15 +10,19 @@
       <li>Asperiores ad, quam unde. Fuga.</li>
     </ol>
     <script>
+
       var elemento = document.createElement("li"),
-      var contenido = document.createTextNode("Nuevo Texto");
+          contenido = document.createTextNode("Nuevo Texto");
 
-      elemento.appenchild(contenido);
+      elemento.appendChild(contenido);
+      //Para eliminar un nodo del navegador
+      var padre = document.getElementsByTagName("li")[0].parentNode,
+          referencia = document.getElementsByTagName("li")[0];
+      padre.removeChild(referencia);
+      //Para reemplazar el (texto) que esta en li[0] que se le pone como padre para reemplazarlo el contenido original "padre" por
+      //var referencia = document.getElementsByTagName("li")[0];
 
-      var padre = document.getElementsByTagName("li")[0].parentNode;
-      var referencia = document.getElementsByTagName("li")[0];
-
-      padre.replaceChild(elemento, document.getElementsByTagName("li")[0]);
+      //padre.replaceChild(elemento, referencia);
 
 
       //Reemplazando texto del document con nodos
