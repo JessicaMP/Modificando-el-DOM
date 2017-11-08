@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <ol id="list">
+      <li id="primero">Lorem ipsum <b>dolor</b> sit amet</li>
+      <li>Asperiores ad, quam unde. Fuga.</li>
+    </ol>
+    <script>
+      var elemento = document.createElement("li"),
+      var contenido = document.createTextNode("Nuevo Texto");
+
+      elemento.appenchild(contenido);
+
+      var padre = document.getElementsByTagName("li")[0].parentNode;
+      var referencia = document.getElementsByTagName("li")[0];
+
+      padre.replaceChild(elemento, document.getElementsByTagName("li")[0]);
+
+
+      //Reemplazando texto del document con nodos
+      //var primerElemento = document.getElementById('primero');
+      //primerElemento.textContent = "Nuevo Texto"; //innerHTML (se puede acceder al todo el codigo HTML y ejecuta el codigo HTML en el navegador <b> o <i>) mientras que con textContent va a ejecutar las mismas etiquetas en texto plano mas no en el navegador
+    </script>
+
+  </body>
+</html>
