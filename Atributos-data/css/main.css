@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+}
+
+.imagenes li {
+  cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.informacion p {
+  display: none;
+}
+
+.informacion p.active {
+  display: block;
+  font-style: italic;
+}
